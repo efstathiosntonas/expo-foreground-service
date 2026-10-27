@@ -1,0 +1,57 @@
+{
+  "name": "@like-magic-dev/expo-foreground-service",
+  "version": "1.0.1",
+  "description": "Run a resilient Android foreground service with a persistent, configurable notification and a background task runner, from Expo/React Native.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "prepare": "npm run clean && npm run build",
+    "format": "prettier --write \"src/**/*.ts\" \"android/**/*.kt\""
+  },
+  "files": [
+    "build",
+    "android",
+    "expo-module.config.json",
+    "app.plugin.js"
+  ],
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-module",
+    "foreground-service",
+    "android",
+    "notification",
+    "headless-task"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/like-magic-dev/expo-foreground-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/like-magic-dev/expo-foreground-service/issues"
+  },
+  "homepage": "https://github.com/like-magic-dev/expo-foreground-service#readme",
+  "author": "Efstathios Ntonas",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@expo/config-plugins": "^58.0.10"
+  },
+  "devDependencies": {
+    "@types/react": "~19.3.0",
+    "expo-modules-core": "^58.0.26",
+    "prettier": "^3.9.10",
+    "react": "19.3.1",
+    "react-native": "0.88.0",
+    "typescript": "~6.0.3"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}

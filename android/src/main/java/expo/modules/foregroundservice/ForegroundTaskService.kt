@@ -112,6 +112,7 @@ class ForegroundTaskService : Service() {
           "mediaPlayback" -> ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK
           "location" -> ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION
           "connectedDevice" -> ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE
+          "camera" -> ServiceInfo.FOREGROUND_SERVICE_TYPE_CAMERA
           "mediaProjection" -> ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION
           else -> ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC
         }
@@ -123,6 +124,7 @@ class ForegroundTaskService : Service() {
           "mediaPlayback" -> ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK
           "location" -> ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION
           "connectedDevice" -> ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE
+          "camera" -> ServiceInfo.FOREGROUND_SERVICE_TYPE_CAMERA
           "mediaProjection" -> ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION
           else -> ServiceInfo.FOREGROUND_SERVICE_TYPE_NONE
         }

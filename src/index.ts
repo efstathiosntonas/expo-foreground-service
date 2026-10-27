@@ -1,7 +1,7 @@
 import ReactNativeForegroundService, {
   ForegroundServiceManager
-} from './src/ForegroundService';
+} from './ForegroundService';
 
 export default ReactNativeForegroundService;
 export { ForegroundServiceManager };
-export * from './src/ForegroundService.types';
+export * from './ForegroundService.types';

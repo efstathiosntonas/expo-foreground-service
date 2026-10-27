@@ -1,1 +1,18 @@
 /.idea/
+
+# node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# build output
+/build/
+*.tsbuildinfo
+
+# Android
+.gradle/
+local.properties
+android/build/
+android/.cxx/
+*.iml

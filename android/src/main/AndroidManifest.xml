@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+      Service-type-specific permissions (FOREGROUND_SERVICE_DATA_SYNC, _CAMERA, _CONNECTED_DEVICE,
+      etc.) and the matching android:foregroundServiceType on the service below are injected by
+      this package's config plugin (app.plugin.js) at `expo prebuild` time, based on the
+      `serviceTypes` option consumers set in their app config. See the README.
+    -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <!-- Define custom permission for secure broadcast -->
@@ -20,15 +23,11 @@
         <meta-data
             android:name="expo.modules.foregroundservice.notification_channel_description"
             android:value="App is running in foreground" />
-        <meta-data
-            android:name="expo.modules.foregroundservice.notification_color"
-            android:resource="@color/<use a color from your theme here>, pick it from android/app/src/main/res/values/colors.xml" />
 
         <service
             android:name=".ForegroundTaskService"
             android:enabled="true"
-            android:exported="false"
-            android:foregroundServiceType="dataSync|camera|connectedDevice" />
+            android:exported="false" />
 
         <service
             android:name=".HeadlessTaskRunner"
